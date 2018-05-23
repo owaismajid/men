@@ -4,6 +4,7 @@ const r = (dir, filePath)=>{
 }
 
 module.exports = {
+    mode: 'development',
     entry: r(null, 'src/main.js'),
     target: 'node',
     output:{
