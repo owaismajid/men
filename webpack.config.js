@@ -1,6 +1,10 @@
+const path = require('path');
+const nodeExternals = require('webpack-node-externals');
+
+
 const r = (dir, filePath)=>{
     if(dir==null) dir = __dirname
-    return require('path').resolve(dir, filePath)
+    return path.resolve(dir, filePath)
 }
 
 module.exports = {
@@ -9,7 +13,12 @@ module.exports = {
     target: 'node',
     output:{
         filename: 'www',
-        path: r(null, 'dist/')
+        path: r(null, 'dist/'),
+        publicPath: "/public"
+    },
+    node:{
+        __dirname: true,
+        __filename: true,
     },
     module:{
         rules:[
@@ -19,5 +28,8 @@ module.exports = {
                 use: 'babel-loader'
             }
         ]
-    }
+    },
+    devtool: 'inline-source-map',
+    externals: [nodeExternals()],
+
 }
