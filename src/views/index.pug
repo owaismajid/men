@@ -1,0 +1,17 @@
+extends layout
+
+block content
+        
+
+    form(action="/api" method="post")
+        input(type="text" name="todo")
+        button(type="submit") Add
+
+    section#todos
+        ul
+            each todo in todos
+                li
+                    span.todo-block=todo.todo
+                    form(action="/api", method="put")
+                        input(type="hidden", name="isFinished")
+                        button(onclick="finish(#{todo._id})")
