@@ -11,7 +11,7 @@ _you can use npm for sure_
 $ git clone git@github.com:owaismajid/men.git /men
 ```
 #### 2. setup enviroment.js file
-* rename ex.enviroment.js to enviroment.js
+* rename `ex.enviroment.js` to enviroment.js
 * change the variables of
     * app
     * database
@@ -30,10 +30,10 @@ $ yarn start
 ## Project Structure
 Spearating Models from Views and Controllers gives you a good way to maintain your project
 
-type |extintion | description
----  |  ---     | ---
-view| .pug | dispalying data to users
-schema| .schema.js | define an entity also called model
+type      |extintion       | description
+---       |  ---           | ---
+view      | .pug           | dispalying data to users
+schema    | .schema.js     | define an entity also called model
 controller| .controller.js | how viwes interact with models
-service| .service.js | data manibulation ex: get data from data base 
-module| .module.js| functions you need in project
+service   | .service.js    | data manibulation ex: get data from data base 
+module    | .module.js     | functions you need in project
