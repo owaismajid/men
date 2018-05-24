@@ -11,10 +11,10 @@ _you can use npm for sure_
 $ git clone git@github.com:owaismajid/men.git /men
 ```
 #### 2. setup enviroment.js file
-* rename example.enviroment.js to enviroment.js
+* rename ex.enviroment.js to enviroment.js
 * change the variables of
     * app
-    * database auth
+    * database
     * _you can after that include your api keys here_
 #### 3. run yarn to install dependencies
 ```bash
